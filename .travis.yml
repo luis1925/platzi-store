@@ -13,6 +13,13 @@ git:
 script:
     - yarn build
 
+notifications:
+    email:
+        recipients:
+            - valderramagastiaburuluisfernan@gmail.com
+        on_success: always
+        on_failure: always
+        
 deploy:
     provider: pages
     skip-cleanup: true
@@ -22,4 +29,4 @@ deploy:
     target-branch: gh-pages
     commit_message: 'Deploy al proyecto'
     on:
-        branch: master  
+        branch: master
